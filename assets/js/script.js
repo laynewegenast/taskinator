@@ -233,11 +233,22 @@ var taskButtonHandler = function(event) {
 
 var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
-}
+};
+
+var loadTasks = function(){
+  //get task items from localStorage
+  var savedTasks = localStorage.getItem("tasks");
+
+  //convert tasks from the string format back into an array of objects
+
+  //iterate through a tasks array and create task elements on the page
+};
 
 formEl.addEventListener("submit", taskFormHandler);
 
 pageContentEl.addEventListener("click", taskButtonHandler);
 
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
+
+loadTasks();
   
